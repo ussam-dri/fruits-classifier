@@ -26,7 +26,7 @@ function App() {
     const newTarget = fruitsList[Math.floor(Math.random() * fruitsList.length)];
     setTargetFruit(newTarget);
     setHint(getHintForFruit(newTarget));
-    setStatus(`Find thea fruit! Upload an image to reveal it.`);
+    setStatus(`Find the fruit! Upload an image to reveal it.`);
   };
 
   const getHintForFruit = (fruit) => {
@@ -277,7 +277,7 @@ function App() {
 
   const Modal = ({ isOpen, onClose, children, title }) => {
     if (!isOpen) return null;
-
+    
     return (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div className="bg-white rounded-xl shadow-2xl p-6 max-w-md w-full mx-4 relative">
@@ -353,7 +353,7 @@ function App() {
                   </span>
                 </div>
               </label>
-
+              
               <div className="mt-3 space-y-2">
                 {hearts <= 0 && (
                   <button
@@ -412,7 +412,7 @@ function App() {
                     />
                   </div>
                 </div>
-
+                
                 {imageURL && (
                   <div className="flex justify-center gap-4 mt-4">
                     {predictions.length > 0 && (
@@ -508,7 +508,7 @@ function App() {
           <div className="text-center">
             <div className="p-3 bg-green-500 rounded-full mb-4 mx-auto w-fit">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
               </svg>
             </div>
             <h2 className="text-2xl font-bold text-green-700 mb-4">Congratulations!</h2>
@@ -530,7 +530,7 @@ function App() {
           <div className="text-center">
             <div className="p-3 bg-red-500 rounded-full mb-4 mx-auto w-fit">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
               </svg>
             </div>
             <h2 className="text-2xl font-bold text-red-700 mb-4">Oops!</h2>
